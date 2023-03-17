@@ -1,6 +1,8 @@
 <template>
   <IsLoading v-if="loading" />
-  <div class="list" v-else>
+  <main v-else>
+    <h2 v-if="!this.$store.state.isAuthenticated">Go back and Login.</h2>
+    <div class="list" v-else>
     <h2>{{ product.title }}</h2>
     <span v-for="(images, i) in product.images" :key="i">
       <img :src="images" alt="product image" class="image" />
@@ -9,6 +11,7 @@
     <p><strong>Description: </strong>{{ product.description }}</p>
     <button @click="Click" class="no">Add to cart</button>
   </div>
+  </main>
 </template>
 
 <script>

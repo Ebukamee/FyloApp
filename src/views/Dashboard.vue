@@ -1,7 +1,9 @@
 <template>
   <IsLoading v-if="loading" />
   <div v-else>
-    <div class="welcome">
+    <h2 v-if="!this.$store.state.isAuthenticated">Go back and Login.</h2>
+    <main v-else>
+      <div class="welcome">
       <p>Welcome back {{ user.username }},What will you buy today?</p>
     </div>
     <div class="cover">
@@ -20,6 +22,7 @@
         <button :disabled="current == 6" @click="Next" class="pag">Next</button>
       </div>
     </div>
+    </main>
   </div>
 </template>
 
