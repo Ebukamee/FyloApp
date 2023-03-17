@@ -20,6 +20,10 @@ body {
 }
 span img {
     width: 80px;
+    margin: 20px;
+}
+nav .link {
+    margin: 20px;
 }
 .link,button{
     float: right;
