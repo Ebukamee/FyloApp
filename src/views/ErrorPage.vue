@@ -3,7 +3,12 @@
         <h1>404</h1>
         <p>The page you requested is not available.</p>
         <button>
-            <router-link to="/" id="button">Back to Home</router-link>
+            <a href="/" id="button">Back to Home</a>
         </button>
     </div>
 </template>
+
+<script>
+   document.title = 'Page Not Found'
+</script>
+

@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import DashBoard from '../views/Dashboard.vue'
 import ErrorPage from '../views/ErrorPage.vue'
 import SignUp from '../views/SignUp.vue'
+import ProductPage from '../views/ProductPage.vue'
 
 const routes = [
   {
@@ -14,6 +15,11 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: DashBoard
+  },
+  {
+    path: '/dashboard/:id',
+    name: ':id',
+    component: ProductPage
   },
   {
     path: '/:catchAll(.*)',

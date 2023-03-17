@@ -31,8 +31,11 @@ nav a.router-link-exact-active {
     components:{
       NavBar
     },
+    data() {
+      return {};
+    },
     mounted() {
-      this.$store.commit('initialstore')
+      localStorage.setItem('set',this.$store.state.users)
     }
   };
 </script>

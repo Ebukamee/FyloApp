@@ -1,4 +1,5 @@
 <script>
+document.title= "Fylo | Home"
 export default {
   name: "HomePage",
 };

@@ -153,3 +153,68 @@ p {
     padding: 10px;
     margin: 20px auto;
 }
+.image {
+    width: 40%;
+    height: 100px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.pag {
+    margin: 0 10px;
+}
+.list {
+    text-align: center;
+}
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+.load {
+    width: 70px;
+    height: 70px;
+    margin: auto;
+    border: 5px dashed var(--cyan);
+    border-radius: 50%;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-transition: all 0.5s ease-in;
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 1.0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    transition: all 0.5s ease-in;
+    animation-name: rotate;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+section h3 {
+    text-align: center;
+    animation-name: ease;
+    animation-duration: 1.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes ease {
+    from {
+        transform: scale(1.0);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    to {
+        transform: scale(1.0);
+    }
+}

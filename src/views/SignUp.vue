@@ -19,20 +19,29 @@ export default {
             password:this.password
         }
         this.error=''
-        this.error2=""
         this.$store.dispatch('signup',user)
           .then (() => {
-            alert('Account created successfully. Navigate back to signup page to access your account')
+            alert('Account created successfully. Navigate back to login page to access your account')
+            this.$router.push('/login')
+            this.username=""
+            this.password=""
+            this.confirm=""
           })
         }
-        else if(this.password.length>7) {
+        else if (this.password == this.confirm && this.password.length <7)  {
             this.error2='The password must contain atleast seven characters'
         }
-        else  {
+        else {
             this.error='Passwords are not corresponding'
+            this.password=""
+            this.confirm=""
+            
         }
     }
   },
+  mounted() {
+    document.title="Fylo | Sign Up"
+  }
 };
 </script>
 

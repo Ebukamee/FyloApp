@@ -1,5 +1,6 @@
-# authapp
+# Fyloapp
 
+## This Project was built with Vue.JS
 ## Project setup
 ```
 npm install
@@ -22,3 +23,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+[Live link](https://fylo-app-two.vercel.app/)

@@ -25,10 +25,11 @@ export default {
       catch(err) {
         this.error=err.message
       }
-      console.log(this.username + "" + this.password);
-      console.log(this.$store.state);
     },
   },
+  mounted() {
+    document.title="Fylo | Login"
+  }
 };
 </script>
 

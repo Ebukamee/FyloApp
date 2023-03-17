@@ -16,7 +16,8 @@ export default createStore({
             username:'Makuo',
             password:'mackpass'
         }
-    ]
+    ],
+    Auth: localStorage.getItem("signup"),
 },
 mutations: {
     setUser(state,user){
@@ -35,6 +36,9 @@ mutations: {
     setToken(state,token) {
         state.token=token
     },
+    signup(state) {
+    state.users=JSON.parse(localStorage.getItem("signup"))
+    }
 },
 actions: {
     login({commit},{username,password}) {
@@ -72,16 +76,31 @@ actions: {
     // },
     signup({state},user) {
         user.id=state.users.length+1
+        // state.users = JSON.parse(localStorage.getItem('set') || this.store.$state.users)
         state.users.push(user)
-        console.log(state)
+        // localStorage.setItem('set',JSON.stringify(state.users))
     },
     logout({commit}) {
         commit('unsetUser')
-    }
+    },
+    set() {
+        localStorage.setItem("signup", JSON.stringify(this.state.users));
+      },
+      get() {
+        const stored = localStorage.getItem("signup");
+
+        if (stored) {
+          return JSON.parse(stored);
+        }
+        return this.state.users
+      },
 },
 getters: {
     isAuthenticated(state) {
         return state.isAuthenticated
+    },
+    users(state) {
+        return state.users
     }
 }
 })
