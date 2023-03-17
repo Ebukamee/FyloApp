@@ -8,7 +8,7 @@
     </div>
 </template>
 
-<script>
+<script setup>
    document.title = 'Page Not Found'
 </script>
 
