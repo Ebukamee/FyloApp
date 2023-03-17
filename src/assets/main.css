@@ -67,6 +67,7 @@ input,form button {
 }
 .no {
     width: 50%;
+    max-width: 180px;
 }
 .btcontain {
     width: 80%;
@@ -155,8 +156,8 @@ p {
 }
 .image {
     width: 40%;
-    max-width: 150px;
-    height: 100px;
+    max-width: 200px;
+    height: 150px;
     margin: 5px;
     border-radius: 5px;
 }
